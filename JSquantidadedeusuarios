@@ -4,3 +4,16 @@ async funcion quantidadedeUsuarios() {
      const dados = await res.json()
      const nomeDaRedes = Object.keys(dados)
      const quantidadedeUsuarios = Object.values(dados)
+
+     const data = [
+         {
+             x: nomeDaRedes,
+             y: quantidadedeUsuarios,
+             type: 'bar'
+         }
+      ]
+      const grafico = document.createElement('div)
+      grafico.className = 'grafico'
+      document.getElementBuId('graficos-container').appendChild(grafico)
+
+      console.log(dados)
