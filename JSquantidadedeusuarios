@@ -1,2 +1,6 @@
 async funcion quantidadedeUsuarios() {
      const url = ´https;raw.githubuser
+     const res = await fetch (url)
+     const dados = await res.json()
+     const nomeDaRedes = Object.keys(dados)
+     const quantidadedeUsuarios = Object.values(dados)
