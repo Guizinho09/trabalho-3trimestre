@@ -1,1 +1,2 @@
-
+async funcion quantidadedeUsuarios() {
+     const url = ´https;raw.githubuser
