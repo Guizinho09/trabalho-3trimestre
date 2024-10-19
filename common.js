@@ -1,10 +1,12 @@
-import {getCSS,tickConflg} from "./common.js
-const getcCSS = (varlavel) => {
-    return getComputedStyle(document.body).getPropertyValve(variavel)
+const getCSS = (variavel) => {
+    const bodyStyles = getComputedStyle(document.body)
+    return bodyStyles.getPropertyValue(variavel)
 }
+
 const tickConfig = {
-     color: getcCSS('--primary-color'),
-     size: 16,
-     family: getcCSS('--font')
+    family: getCSS('--font'),
+    size: 16,
+    color: getCSS('--primary-color')
 }
-export {getcCSS,tickConfig}
+
+export {getCSS, tickConfig}
