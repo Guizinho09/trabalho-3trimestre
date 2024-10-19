@@ -1,29 +1,78 @@
-const url = "https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.js"
-console.log(url);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-async function visualizarInformacoesGlobais (){
-    
-    const res = await fetch(url);
-    const dados = await res.json();
-    const pessoasConectadas = (dados.total_pessoas_conectadas) / 1e9
-    const pessoasMundo = (dados.total_pessoas_mundo)/1e9 
-    const horas = parseInt (dados.tempo_medio)
-    const minutos = math.round ((dados.tempo_medio - horas)* 100)
-    const paragrafo = document.createElement('p')
-    paragrafo.classList.add('graficos-container_texto')
-    paragrafo.innerHTML = `Você sabia que o mundo tem 
-<span>${pessoasMundo}</span> de pessoas e 
-que aproximadamente <span>${pessoasConectadas}</span>
-estão conectadas em alguma rede social e passam em media 
-<span>${horas}</span> horas e <span>${minutos}</span> minutos conectadas.
-<br> Isso significa que aproximadamente ${porcentagemConectada}%
-de pessoas estão conectadas em alguma rede social.`
-    const container = document.getElementById(ǵraficos-container`
-    constainer.appendChild(paragrafo)
+:root {
+    --bg-color: #222831;
+    --primary-color: #DDDDDD;
+    --secondary-color: #F05454;
+    --font: "Nunito Sans", sans-serif;
+}
 
-visualizarInformacoesGlobais()
-{
-    "total_pessoas_conectadas"; 5.04e9,
-    "total_medio"; 2.38,
-    "total_pessoas_mundo"; 7.888e9
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: var(--font);
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--bg-color);
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bg-color);
+    margin: 0 2rem 1rem 0rem;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+
+.graficos-container {
+    margin: 5rem;
+}
+
+.grafico {
+    margin-top: 3rem;
+}
+
+.graficos-container__texto {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 2rem;
+    border: var(--secondary-color) solid 2px;
+}
+
+span {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
 }
