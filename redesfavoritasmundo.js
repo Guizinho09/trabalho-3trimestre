@@ -4,6 +4,7 @@ const layout = {
   paper_bgcolor: getCSS('--bg-color),
   height: 700,
   title: {
+  }
 
   }
 const grafico = document.createElement ('div')
@@ -23,5 +24,3 @@ const grafico = document.createElement ('div')
              com mais usuários, sendo terceira opção mais apreciada pelos usuários.<br>Essa preferéncia
              envidencia a forte conexão e apreço que as pessoas têm pelo Instagram em comparação
              com outras rede.`) 
-
-
