@@ -53,4 +53,7 @@ span{
     font-weight: bold;
     color: var(--secundary-color);
 }
+.grafico{
+    margin-top: 3rem
+}
     
