@@ -18,4 +18,8 @@ function incluirTexto(texto){
     const contaiter = document.getElementById
     ('graficos-container');
     const paragrafo = document.
-    paragrafo.classlist.add('grafico
+    paragrafo.classlist.add('grafico-container_texto')
+    paragrafo.innHTML = txto
+    container.appendChild(paragrafo)
+}
+export {getcCSS,tickconfig,criarGrafico,incluirTexto}
